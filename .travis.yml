@@ -7,4 +7,4 @@ before_install:
   - docker build -t temi111/docker-react -f Dockerfile.dev . 
 
 script:
-  - docker run temi111/docker-react npm run test -- --coverage
+  - docker run -e CI=true temi111/docker-react npm run test
